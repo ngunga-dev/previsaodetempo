@@ -4,16 +4,16 @@ function App() {
   const [city,setCity]=useState();
   const [weatherForecast,setWeatherForecast]=useState(null)
 
-  const hendleChange=async (cidade)=>{
-    const newCity= await cidade.target.value;
+  const hendleChange= (cidade)=>{
+    const newCity= cidade.target.value;
     if(city==="")return 
     setCity(newCity)
     
   }
 
-  const hendleSearch=async ()=>{
+  const hendleSearch=()=>{
     const key="f751498fffae496f911182221220304";
-    const url= await(`http://api.weatherapi.com/v1/current.json?key=${key}&q=${city}&lang=pt`)
+    const url=(`http://api.weatherapi.com/v1/current.json?key=${key}&q=${city}&lang=pt`)
     fetch(url)
     .then(response=>{
       if(response.status===200){
