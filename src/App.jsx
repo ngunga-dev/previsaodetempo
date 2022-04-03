@@ -14,7 +14,7 @@ function App() {
   const hendleSearch=async ()=>{
     const key="f751498fffae496f911182221220304";
     const url= await(`http://api.weatherapi.com/v1/current.json?key=${key}&q=${city}&lang=pt`)
-    await fetch(url)
+    fetch(url)
     .then(response=>{
       if(response.status===200){
       return  response.json()
