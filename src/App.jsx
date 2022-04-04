@@ -12,7 +12,7 @@ function App() {
 
   const hendleSearch=()=>{
     const key="f751498fffae496f911182221220304";
-    const url=(`http://api.weatherapi.com/v1/current.json?key=${key}&q=${city}&lang=pt`)
+    const url=(`https://api.weatherapi.com/v1/current.json?key=${key}&q=${city}&lang=pt`)
     fetch(url)
     .then(response=>{
       if(response.status===200){
