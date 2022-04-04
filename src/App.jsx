@@ -23,6 +23,7 @@ function App() {
       console.log(data)
       setWeatherForecast(data)
     })
+    .catch(err=>console.log(err))
   }
 
   return (
