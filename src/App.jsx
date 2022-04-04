@@ -1,12 +1,11 @@
 import { useState } from 'react'
 
 function App() {
-  const [city,setCity]=useState();
+  const [city,setCity]=useState("");
   const [weatherForecast,setWeatherForecast]=useState(null)
 
   const hendleChange= (cidade)=>{
     const newCity= cidade.target.value;
-    if(city==="")return 
     setCity(newCity)
     
   }
